@@ -23,6 +23,7 @@
 	"main": "dist/index.js",
 	"scripts": {
 		"start": "babel-node src/index.js",
+		"format": "prettier --write \"{src,test}{,/**}/*.{js,json}\"",
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"build": "babel src -d dist"
 	},
