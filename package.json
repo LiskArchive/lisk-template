@@ -1,0 +1,27 @@
+{
+	"name": "lisk-template",
+	"version": "0.1.0",
+	"description": "Template repository for Lisk projects",
+	"author": "Lisk Foundation <admin@lisk.io>, lightcurve GmbH <admin@lightcurve.io>",
+	"license": "GPL-3.0",
+	"keywords": [
+		"lisk",
+		"blockchain"
+	],
+	"homepage": "https://github.com/LiskHQ/lisk-template#readme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/LiskHQ/lisk-template.git"
+	},
+	"bugs": {
+		"url": "https://github.com/LiskHQ/lisk-template/issues"
+	},
+	"engines": {
+		"node": ">=6.11.1",
+		"npm": ">=3.10.0"
+	},
+	"main": "dist/index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	}
+}
