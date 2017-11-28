@@ -22,7 +22,9 @@
 	},
 	"main": "dist/index.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"start": "babel-node src/index.js",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "babel src -d dist"
 	},
 	"devDependencies": {
 		"babel-cli": "=6.26.0",
