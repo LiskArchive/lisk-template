@@ -24,6 +24,7 @@
 	"scripts": {
 		"start": "babel-node src/index.js",
 		"format": "prettier --write \"{src,test}{,/**}/*.{js,json}\"",
+		"lint": "eslint .",
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"build": "babel src -d dist"
 	},
