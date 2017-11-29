@@ -42,6 +42,7 @@
 		"eslint-plugin-import": "=2.8.0",
 		"husky": "=0.14.3",
 		"lint-staged": "=5.0.0",
+		"mocha": "=4.0.1",
 		"prettier": "=1.8.2"
 	}
 }
