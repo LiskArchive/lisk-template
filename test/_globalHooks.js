@@ -13,15 +13,6 @@
  * Removal or modification of this copyright notice is prohibited.
  *
  */
-import chai from 'chai';
-import 'chai/register-expect';
-import chaiAsPromised from 'chai-as-promised';
-import sinonChai from 'sinon-chai';
-import sinon from 'sinon';
-
-process.env.NODE_ENV = 'test';
-
-[chaiAsPromised, sinonChai].forEach(plugin => chai.use(plugin));
-
-global.sinon = sinon;
-global.sandbox = sinon.sandbox.create();
+afterEach(() => {
+	sandbox.restore();
+});
