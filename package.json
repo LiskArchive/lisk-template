@@ -23,6 +23,7 @@
 	"main": "dist/index.js",
 	"scripts": {
 		"start": "babel-node src/index.js",
+		"format": "prettier --write \"{src,test}{,/**}/*.{js,json}\"",
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"build": "babel src -d dist"
 	},
@@ -30,6 +31,8 @@
 		"babel-cli": "=6.26.0",
 		"babel-plugin-transform-runtime": "=6.23.0",
 		"babel-preset-env": "=1.6.1",
-		"babel-runtime": "=6.26.0"
+		"babel-runtime": "=6.26.0",
+		"lint-staged": "=5.0.0",
+		"prettier": "=1.8.2"
 	}
 }
