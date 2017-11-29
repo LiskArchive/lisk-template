@@ -26,7 +26,10 @@
 		"format": "prettier --write \"{src,test}{,/**}/*.{js,json}\"",
 		"lint": "eslint .",
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"build": "babel src -d dist"
+		"build": "babel src -d dist",
+		"precommit": "lint-staged && npm run lint",
+		"prepush": "npm run lint && npm test",
+		"prepublishOnly": "npm run prepush && npm run build"
 	},
 	"devDependencies": {
 		"babel-cli": "=6.26.0",
@@ -37,6 +40,7 @@
 		"eslint-config-airbnb-base": "=12.1.0",
 		"eslint-config-lisk-base": "=0.1.0",
 		"eslint-plugin-import": "=2.8.0",
+		"husky": "=0.14.3",
 		"lint-staged": "=5.0.0",
 		"prettier": "=1.8.2"
 	}
