@@ -13,3 +13,7 @@
  * Removal or modification of this copyright notice is prohibited.
  *
  */
+
+export function aThenStep() {
+	throw new Error('step not implemented');
+}

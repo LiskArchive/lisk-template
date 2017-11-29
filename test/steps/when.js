@@ -13,4 +13,4 @@
  * Removal or modification of this copyright notice is prohibited.
  *
  */
-export * from './my_module/when';
+export { aWhenStep } from './my_module/when';
