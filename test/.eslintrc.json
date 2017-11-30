@@ -1,0 +1,13 @@
+{
+	"env": {
+		"mocha": true
+	},
+	"globals": {
+		"expect": true,
+		"sandbox": true,
+		"sinon": true
+	},
+	"rules": {
+		"arrow-body-style": "off"
+	}
+}

@@ -13,4 +13,4 @@
  * Removal or modification of this copyright notice is prohibited.
  *
  */
-export * from './my_module/given';
+export { aGivenStep } from './my_module/given';
