@@ -18,11 +18,9 @@ import * as when from '../steps/when';
 import * as then from '../steps/then';
 
 describe('My first specification', () => {
-	describe('Given a given step', () => {
-		beforeEach(given.aGivenStep);
-		describe('When a when step', () => {
-			beforeEach(when.aWhenStep);
-			it('Then a then step', then.aThenStep);
+	Given('a given step', given.aGivenStep, () => {
+		When('a when step', when.aWhenStep, () => {
+			Then('a then step', then.aThenStep);
 		});
 	});
 });
