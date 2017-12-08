@@ -13,11 +13,14 @@
  * Removal or modification of this copyright notice is prohibited.
  *
  */
+import { setUpIndex, tearDownIndex } from '../steps/setup';
 import * as given from '../steps/given';
 import * as when from '../steps/when';
 import * as then from '../steps/then';
 
 describe('My first specification', () => {
+	beforeEach(setUpIndex);
+	afterEach(tearDownIndex);
 	Given('a given step', given.aGivenStep, () => {
 		When('a when step', when.aWhenStep, () => {
 			Then('a then step', then.aThenStep);

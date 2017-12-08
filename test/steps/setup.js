@@ -13,3 +13,12 @@
  * Removal or modification of this copyright notice is prohibited.
  *
  */
+export function setUpIndex() {
+	// Stubs, spies, etc should be created here
+	// Environmental variables can be stored and/or updated
+}
+
+export function tearDownIndex() {
+	// Environmental variables can be restored here
+	// Sinon helpers which aren’t part of the sandbox (e.g. timers) should be restored here
+}
