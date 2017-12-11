@@ -112,6 +112,17 @@ The `.snyk` file configures Snyk.
 - `.npmignore` ensures that as little as possible is included when published to NPM. This may require adjustment.
 - If the project is for a client, or otherwise will not be used as a library in other projects, consider replacing `babel-plugin-transform-runtime` and `babel-runtime` with `babel-polyfill` (see the [details section of the Babel Polyfill documentation](babel-polyfill-details)).
 
+## License
+
+Copyright © 2017 Lisk Foundation
+
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the [GNU General Public License][license] along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
 [babel]: https://babeljs.io/
 [babel-polyfill-details]: http://babeljs.io/docs/usage/polyfill#details
 [bootstrap-script]: https://github.com/LiskHQ/lisk-template/blob/master/bin/bootstrap.sh
@@ -120,6 +131,7 @@ The `.snyk` file configures Snyk.
 [eslint]: https://eslint.org/
 [gwt-blogpost]: https://blog.lisk.io/bdd-style-unit-testing-with-mocha-704137e429d5
 [husky]: https://github.com/typicode/husky
+[license]: https://github.com/LiskHQ/lisk-template/tree/master/LICENSE
 [lint-staged]: https://github.com/okonet/lint-staged
 [mocha]: http://mochajs.org/
 [nvm]: https://github.com/creationix/nvm
