@@ -15,22 +15,29 @@
 When starting a new Lisk project, use this repository as a base. With a few small customisations, you will have a skeleton project up and running in a few minutes. The easiest way to bootstrap a new project is using the `bin/bootstrap.sh` script:
 
 ```sh
-curl --silent --user my_github_username https://raw.githubusercontent.com/LiskHQ/lisk-template/30-start_script/bin/bootstrap.sh | bash -l -s my-fresh-lisk-project
+curl --silent --user my_github_username "https://raw.githubusercontent.com/LiskHQ/lisk-template/master/bin/bootstrap.sh" | bash -ls my-fresh-lisk-project
+```
+
+If you have two-factor authentication enabled on your GitHub account, you will need to generate an access token rather than authenticating via curl. Having logged into GitHub using a browser, view [the bootstrap script][bootstrap-script] in the same browser. Click "Raw" to view the raw file. Then copy the full URL (including the access token) and run the following:
+
+```sh
+curl --silent "the_url_i_just_copied?token=remember_the_token" | bash -ls my-fresh-lisk-project
 ```
 
 Notes:
 
-- `my_github_username` should be replaced with your GitHub username. You will be prompted for your GitHub password.
+- `my_github_username` in the first command should be replaced with your GitHub username. You will be prompted for your GitHub password.
+- **Watch out**: some terminal applications automatically escape pasted strings, which may conflict with the quoting used in the examples above. If you get a 404 error and you've authenticated successfully with GitHub, check to see if the URL has escape characters which should be removed.
 - The `-l` option tells bash to act as if it had been invoked as a login shell. If you use [nvm][nvm] as your Node.js version manager, then it will be used to set the correct version of Node.js when installing NPM dependencies.
 - `my-fresh-lisk-project` should be replaced with the name you’ve chosen for your new project.
 
 If you would rather complete this process on your own, you should follow these steps:
 
-1. Clone the repository
-1. Reinitialise git (by removing the `.git` directory, running `git init` and committing everything into the initial commit)
-1. Find and replace all instances of `lisk-template` with your project name (assuming the name of your project is the same as its GitHub namespace)
-1. Commit these customisation changes
-1. Run `npm install`
+1. Clone the repository.
+1. Reinitialise git (by removing the `.git` directory, running `git init` and committing everything into the initial commit).
+1. Find and replace all instances of `lisk-template` with your project name (assuming the name of your project is the same as its GitHub namespace).
+1. Commit these customisation changes.
+1. Run `npm install`.
 
 More precise steps can be viewed in the `bin/bootstrap.sh` script.
 
@@ -107,6 +114,7 @@ The `.snyk` file configures Snyk.
 
 [babel]: https://babeljs.io/
 [babel-polyfill-details]: http://babeljs.io/docs/usage/polyfill#details
+[bootstrap-script]: https://github.com/LiskHQ/lisk-template/blob/master/bin/bootstrap.sh
 [chai]: http://chaijs.com/
 [coveralls]: https://coveralls.io/
 [eslint]: https://eslint.org/
