@@ -29,6 +29,11 @@ pipeline {
 				}
 			}
 		}
+		stage('Deploy') {
+			steps {
+				error('No deployment process specified. Depending on your project you may prefer to remove this stage entirely.')
+			}
+		}
 	}
 	post {
 		success {
