@@ -112,6 +112,10 @@ The `.snyk` file configures Snyk.
 - `.npmignore` ensures that as little as possible is included when published to NPM. This may require adjustment.
 - If the project is for a client, or otherwise will not be used as a library in other projects, consider replacing `babel-plugin-transform-runtime` and `babel-runtime` with `babel-polyfill` (see the [details section of the Babel Polyfill documentation](babel-polyfill-details)).
 
+## Contributors
+
+https://github.com/LiskHQ/lisk-template/graphs/contributors
+
 ## License
 
 Copyright © 2017 Lisk Foundation
