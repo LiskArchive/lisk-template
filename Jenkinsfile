@@ -8,16 +8,20 @@ pipeline {
 		}
 		stage('Run lint') {
 			steps {
-				sh 'npm run lint'
+				ansiColor('xterm') {
+					sh 'npm run lint'
+				}
 			}
 		}
 		stage('Run tests') {
 			steps {
-				sh 'npm run test'
-				sh '''
-				cp ~/.coveralls.yml-lisk-template .coveralls.yml
-				npm run cover
-				'''
+				ansiColor('xterm') {
+					sh 'npm run test'
+					sh '''
+					cp ~/.coveralls.yml-lisk-template .coveralls.yml
+					npm run cover
+					'''
+				}
 			}
 		}
 	}
