@@ -3,11 +3,15 @@
 		"mocha": true
 	},
 	"globals": {
+		"Given": true,
+		"When": true,
+		"Then": true,
 		"expect": true,
 		"sandbox": true,
 		"sinon": true
 	},
 	"rules": {
-		"arrow-body-style": "off"
+		"arrow-body-style": "off",
+		"new-cap": ["error", { "capIsNewExceptions": ["Given", "When", "Then"] }]
 	}
 }
