@@ -83,6 +83,7 @@ Several files are especially relevant for contributors:
 ## Project structure
 
 - Source code should go in `src`, test code should go in `test`.
+- File names should be `underscore_separated` for best cross-file system compatibility. (I.e. not in camel case etc.)
 - nyc output goes into `.nyc_output`, and built files are put into a `dist` directory which is created when needed.
 - Files you do not want to commit can be placed in `.idea` or `tmp` (you will need to create these directories yourself).
 
