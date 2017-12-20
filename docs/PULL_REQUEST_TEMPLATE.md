@@ -12,3 +12,4 @@
 - Linting passes
 - Tests pass
 - Commit messages follow the [commit guidelines](CONTRIBUTING.md#git-commit-messages)
+- Documentation has been added/updated
