@@ -7,12 +7,12 @@
 
 ## Goals of this repository
 
-1. To gather standards, patterns and workflows which we adopt, in order to provide a central source of truth regarding our "current thinking", which can then be applied to individual Lisk projects as and when appropriate.
+1. To gather standards, patterns and workflows which we adopt, in order to provide a central source of truth regarding our “current thinking”, which can then be applied to individual Lisk projects as and when appropriate.
 1. To serve as a base for new projects.
 
 ## Usage
 
-When starting a new Lisk project, use this repository as a base. With a few small customisations, you will have a skeleton project up and running in a few minutes. The easiest way to bootstrap a new project is using the `bin/bootstrap.sh` script:
+When starting a new Lisk project, use this repository as a base. With a few small customizations, you will have a skeleton project up and running in a few minutes. The easiest way to bootstrap a new project is using the `bin/bootstrap.sh` script:
 
 ```sh
 curl --silent --user my_github_username "https://raw.githubusercontent.com/LiskHQ/lisk-template/master/bin/bootstrap.sh" | bash -ls my-fresh-lisk-project
@@ -36,7 +36,7 @@ If you would rather complete this process on your own, you should follow these s
 1. Clone the repository.
 1. Reinitialise git (by removing the `.git` directory, running `git init` and committing everything into the initial commit).
 1. Find and replace all instances of `lisk-template` with your project name (assuming the name of your project is the same as its GitHub namespace).
-1. Commit these customisation changes.
+1. Commit these customization changes.
 1. Run `npm install`.
 
 More precise steps can be viewed in the `bin/bootstrap.sh` script.
@@ -51,7 +51,7 @@ Installed for your convenience are the following:
 
 1. [Babel][babel] plus various plugins, presets and tools so you can write modern JavaScript without worrying about compatibility.
 1. [Prettier][prettier] for standard code formatting.
-1. [Eslint][eslint] plus various configs and plugins, to enforce additional rules beyond Prettier’s remit.
+1. [ESLint][eslint] plus various configs and plugins, to enforce additional rules beyond Prettier’s remit.
 1. [Husky][husky] and [lint-staged][lint-staged] to help with running checks/builds before/after various git/NPM commands.
 1. [Mocha][mocha], [Chai][chai] and [Sinon][sinon] plus plugins for tests.
 1. [nyc][nyc] and [Coveralls][coveralls] for coverage.
@@ -62,9 +62,9 @@ These can be removed as appropriate, along with the corresponding NPM scripts.
 
 - `start` will run your source code using `babel-node`, which is not performant but does not require transpilation.
 - `format` will format your source and test code using Prettier.
-- `lint` will lint everything relevant with Eslint.
+- `lint` will lint everything relevant with ESLint.
 - `test` will run your tests and instrument your code using nyc. (With the initial setup this results in a failing test: the first step in TDD’s red-green-refactor process!)
-- `test:watch` will watch for changes and reruns your tests.
+- `test:watch` will watch for changes and rerun your tests.
 - `test:watch:min` will do the same but using the `min` reporter (useful if you just want to check if your changes break a test).
 - `cover` will output a coverage report (differs based on the environment).
 - `build` will transpile your source code using Babel.
@@ -74,16 +74,16 @@ These can be removed as appropriate, along with the corresponding NPM scripts.
 
 ## Documentation for contributors
 
-Several files are especially relevant for contributors:
+Several files especially relevant for contributors can be found in the `docs` directory:
 - `CODE_OF_CONDUCT.md` which should probably be left as it is.
-- `CONTRIBUTING.md` which will benefit from project-specific customisation.
-- `ISSUE_TEMPLATE.md` which may need to be adapted to your project.
-- `LICENSE` which should be left alone unless your project is being released under a different licence. In this case the `license` field of the `package.json` file should be updated as well.
+- `CONTRIBUTING.md` which will benefit from project-specific customization.
+- `ISSUE_TEMPLATE.md` and `PULL_REQUEST_TEMPLATE.md` which may need to be adapted to your project.
+- Additionally, in the root of the project is the `LICENSE` file, which should be left alone unless your project is being released under a different license. In this case the `license` field of the `package.json` file should be updated as well.
 
 ## Project structure
 
 - Source code should go in `src`, test code should go in `test`.
-- File names should be `underscore_separated` for best cross-file system compatibility. (I.e. not in camel case etc.)
+- File and directory names should be `underscore_separated` for best cross-file system compatibility. (I.e. not in camel case etc.)
 - nyc output goes into `.nyc_output`, and built files are put into a `dist` directory which is created when needed.
 - Files you do not want to commit can be placed in `.idea` or `tmp` (you will need to create these directories yourself).
 
@@ -95,6 +95,7 @@ If this approach does not suit your project the structure can be replaced as nec
 
 - Combining Babel, nyc and Mocha.
 - Adding Chai’s `expect` as a global, and initialising plugins.
+- Adding `Given`, `When` and `Then` from [mocha-bdd][mocha-bdd] as globals.
 - Adding `sinon` and a sinon `sandbox` as globals, and resetting the sandbox after each test in a global hook (it is recommended to use the sandbox wherever possible to avoid manual resets).
 
 ## Continuous integration
@@ -112,6 +113,7 @@ The `.snyk` file configures Snyk.
 - `.editorconfig` can be used in combination with plugins for a wide range of editors/IDEs to ensure consistency of certain key syntax details.
 - `.npmignore` ensures that as little as possible is included when published to NPM. This may require adjustment.
 - If the project is for a client, or otherwise will not be used as a library in other projects, consider replacing `babel-plugin-transform-runtime` and `babel-runtime` with `babel-polyfill` (see the [details section of the Babel Polyfill documentation](babel-polyfill-details)).
+- The official language for all Lisk projects is US English (although we may also support translations into other languages on a per-project basis).
 
 ## Contributors
 
@@ -139,6 +141,7 @@ You should have received a copy of the [GNU General Public License][license] alo
 [license]: https://github.com/LiskHQ/lisk-template/tree/master/LICENSE
 [lint-staged]: https://github.com/okonet/lint-staged
 [mocha]: http://mochajs.org/
+[mocha-bdd]: https://github.com/LiskHQ/mocha-bdd
 [nvm]: https://github.com/creationix/nvm
 [nyc]: https://istanbul.js.org/
 [prettier]: https://prettier.io/

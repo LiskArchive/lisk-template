@@ -11,17 +11,17 @@ fi
 git clone git@github.com:LiskHQ/lisk-template.git "$projectname"
 cd "$projectname"
 
-# Reinitialise git
+# Reinitialize git
 rm -rf .git
 git init
 git add .
-git commit -m 'Initial commit' -m 'Initialised from lisk-template: https://github.com/LiskHQ/lisk-template'
+git commit -m 'Initial commit' -m 'Initialized from lisk-template: https://github.com/LiskHQ/lisk-template'
 
-# Customise project using provided project name
+# Customize project using provided project name
 git grep -l lisk-template | xargs sed -i '' "s/lisk-template/$projectname/g"
 rm bin/bootstrap.sh
 git add .
-git commit -m "Customise lisk-template as $projectname"
+git commit -m "Customize lisk-template as $projectname"
 
 # Install npm dependencies
 test $(command -v nvm) && nvm use 6.12.2
