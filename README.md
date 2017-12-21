@@ -108,6 +108,12 @@ This project assumes a standard CI setup on Jenkins. There are three Jenkinsfile
 
 The `.snyk` file configures Snyk.
 
+In order to set up continuous integration for your project you will need to do the following:
+1. Modify the main Jenkinsfile to your requirements.
+1. Update your GitHub project settings to allow Jenkins to submit information.
+1. Set up the main Jenkins project, the private project, and the private nightly project in the `nightly-builds` folder.
+1. Add a Coveralls configuration file at `~/.coveralls.yml-lisk-template` on all Jenkins nodes that will be used to build lisk-template.
+
 ## Miscellaneous information
 
 - `.editorconfig` can be used in combination with plugins for a wide range of editors/IDEs to ensure consistency of certain key syntax details.
