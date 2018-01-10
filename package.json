@@ -2,12 +2,10 @@
 	"name": "lisk-template",
 	"version": "0.1.0",
 	"description": "Template repository for Lisk projects",
-	"author": "Lisk Foundation <admin@lisk.io>, lightcurve GmbH <admin@lightcurve.io>",
+	"author":
+		"Lisk Foundation <admin@lisk.io>, lightcurve GmbH <admin@lightcurve.io>",
 	"license": "GPL-3.0",
-	"keywords": [
-		"lisk",
-		"blockchain"
-	],
+	"keywords": ["lisk", "blockchain"],
 	"homepage": "https://github.com/LiskHQ/lisk-template#readme",
 	"repository": {
 		"type": "git",
@@ -23,20 +21,23 @@
 	"main": "dist/index.js",
 	"scripts": {
 		"start": "babel-node src/index.js",
-		"format": "prettier --write \"{src,test}{,/**}/*.{js,json}\"",
+		"format":
+			"prettier --write \"./*.{js,json,md}\" \"{docs,src,test}{,/**}/*.{js,json,md}\"",
 		"lint": "eslint .",
 		"lint:fix": "npm run lint -- --fix",
 		"test": "NODE_ENV=test nyc mocha",
 		"test:watch": "npm test -- --watch",
 		"test:watch:min": "npm run test:watch -- --reporter=min",
-		"cover": "if [ -z $JENKINS_HOME ]; then npm run cover:local; else npm run cover:ci; fi",
+		"cover":
+			"if [ -z $JENKINS_HOME ]; then npm run cover:local; else npm run cover:ci; fi",
 		"cover:base": "NODE_ENV=test nyc report",
 		"cover:local": "npm run cover:base -- --reporter=html --reporter=text",
 		"cover:ci": "npm run cover:base -- --reporter=text-lcov | coveralls -v",
 		"build": "babel src -d dist",
 		"precommit": "lint-staged && npm run lint",
 		"prepush": "npm run lint && npm test",
-		"prepublishOnly": "rm -r ./node_modules && npm install && npm run prepush && npm run build"
+		"prepublishOnly":
+			"rm -r ./node_modules && npm install && npm run prepush && npm run build"
 	},
 	"dependencies": {
 		"babel-runtime": "=6.26.0"
