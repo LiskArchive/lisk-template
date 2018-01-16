@@ -222,19 +222,22 @@ following information:
 * Use the imperative mood ("Move cursor to..." not "Moves cursor to...")
 * Limit the first line to 72 characters or less
 * Reference issues and pull requests liberally after the first line
-* Consider starting the commit message with an applicable emoji: _ :seedling:
-	`:seedling:` when adding a new feature _ :bug: `:bug:` when fixing a bug _
-	:books: `:books:` when adding or updating documentation _ :nail*care:
-	`:nail_care:` when making changes to code style (e.g. lint settings) *
-	:recycle: `:recycle:` when refactoring code _ :fire: `:fire:` when removing
-	code or files (including dependencies) _ :racehorse: `:racehorse:` when
-	improving performance _ :white_check_mark: `:white_check_mark:` when adding or
-	updating tests _ :construction*worker: `:construction_worker:` when updating
-	the build process * :bowtie: `:bowtie:` when updating CI _ :house: `:house:`
-	when performing chores _ :new: `:new:` when adding a new dependency _
-	:arrow_up: `:arrow_up:` when upgrading a dependency _ :arrow_down:
-	`:arrow_down:` when downgrading a dependency \* :back: `:back:` when reverting
-	changes
+* Consider starting the commit message with an applicable emoji:
+	* :seedling: `:seedling:` when adding a new feature
+	* :bug: `:bug:` when fixing a bug
+	* :books: `:books:` when adding or updating documentation
+	* :nail_care: `:nail_care:` when making changes to code style (e.g. lint settings)
+	* :recycle: `:recycle:` when refactoring code
+	* :fire: `:fire:` when removing code or files (including dependencies)
+	* :racehorse: `:racehorse:` when improving performance
+	* :white_check_mark: `:white_check_mark:` when adding or updating tests
+	* :construction_worker: `:construction_worker:` when updating the build process
+	* :bowtie: `:bowtie:` when updating CI
+	* :house: `:house:` when performing chores
+	* :new: `:new:` when adding a new dependency
+	* :arrow_up: `:arrow_up:` when upgrading a dependency
+	* :arrow_down: `:arrow_down:` when downgrading a dependency
+	* :back: `:back:` when reverting changes
 
 ### JavaScript Styleguide
 
