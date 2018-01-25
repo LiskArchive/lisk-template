@@ -13,6 +13,7 @@
  * Removal or modification of this copyright notice is prohibited.
  *
  */
+/* eslint-disable mocha/no-top-level-hooks */
 afterEach(() => {
-	sandbox.restore();
+	return sandbox.restore();
 });
