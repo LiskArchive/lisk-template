@@ -182,6 +182,20 @@ the following:
 * The official language for all Lisk projects is US English (although we may
 	also support translations into other languages on a per-project basis).
 
+## Applying these standards
+
+All of these standards should be applied with the specific project in mind.
+There might be good reasons to delay the application of some standard, or to
+avoid it completely. In particular, the following are very likely to vary from
+project to project:
+
+* The Babel plugins `babel-plugin-transform-runtime` and `babel-runtime` (where
+	`babel-polyfill` might make more sense)
+* Use of Babel at all
+* The `mocha-bdd` dependency and the testing structure
+* The `npm start` script
+* The `npm run build` script
+
 ## Contributors
 
 https://github.com/LiskHQ/lisk-template/graphs/contributors
