@@ -15,8 +15,8 @@
 		"url": "https://github.com/LiskHQ/lisk-template/issues"
 	},
 	"engines": {
-		"node": ">=6.12.2",
-		"npm": ">=3.10.0"
+		"node": "=6.12.3",
+		"npm": "=3.10.10"
 	},
 	"main": "dist/index.js",
 	"scripts": {
