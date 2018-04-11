@@ -24,5 +24,5 @@ git add .
 git commit -m "Customize lisk-template as $projectname"
 
 # Install npm dependencies
-test $(command -v nvm) && nvm use 6.12.2
+test $(command -v nvm) && nvm use 6.14.1
 test $(command -v npm) && npm install
