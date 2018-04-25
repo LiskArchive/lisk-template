@@ -20,5 +20,5 @@ export function setUpIndex() {
 
 export function tearDownIndex() {
 	// Environmental variables can be restored here
-	// Sinon helpers which aren’t part of the sandbox (e.g. timers) should be restored here
+	// Sinon helpers which aren’t part of the sandbox should be restored here
 }
