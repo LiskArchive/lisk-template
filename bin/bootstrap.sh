@@ -19,6 +19,8 @@ git commit -m 'Initial commit' -m 'Initialized from lisk-template: https://githu
 
 # Customize project using provided project name
 git grep -l lisk-template | xargs sed -i '' "s/lisk-template/$projectname/g"
+sed -i '.bak' $'s/\t"version": .*/\t"version": "0.0.0",/' package.json
+rm package.json.bak
 rm bin/bootstrap.sh
 git add .
 git commit -m "Customize lisk-template as $projectname"
