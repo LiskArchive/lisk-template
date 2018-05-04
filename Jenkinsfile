@@ -61,14 +61,8 @@ pipeline {
 	post {
 		success {
 			script {
-				if (currentBuild.result == null || currentBuild.result == 'SUCCESS') {
-					previous_build = currentBuild.getPreviousBuild()
-					if (previous_build != null && previous_build.result == 'FAILURE') {
-						build_info = get_build_info()
-						slack_send('good', "Recovery: build ${build_info} was successful.")
-					}
-				}
-
+				build_info = get_build_info()
+				slack_send('good', "Recovery: build ${build_info} was successful.")
 			}
 			githubNotify context: 'continuous-integration/jenkins/lisk-template', description: 'The build passed.', status: 'SUCCESS'
 		}
@@ -76,7 +70,6 @@ pipeline {
 			script {
 				build_info = get_build_info()
 				slack_send('danger', "Build ${build_info} failed (<${env.BUILD_URL}/console|console>, <${env.BUILD_URL}/changes|changes>)\n")
-
 			}
 			githubNotify context: 'continuous-integration/jenkins/lisk-template', description: 'The build failed.', status: 'FAILURE'
 		}
