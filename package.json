@@ -34,7 +34,7 @@
     "cover:local": "npm run cover:base -- --reporter=html --reporter=text",
     "cover:ci": "npm run cover:base -- --reporter=text-lcov | coveralls -v",
     "build": "babel src -d dist",
-    "precommit": "lint-staged && npm run lint",
+    "precommit": "lint-staged",
     "prepush": "npm run lint && npm test",
     "prepublishOnly": "rm -r ./node_modules && npm install && npm run prepush && npm run build"
   },
