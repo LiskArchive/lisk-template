@@ -26,6 +26,7 @@
     "format": "prettier --write \"**/*.{js,json,md}\"",
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
+    "check:dependencies": "snyk test",
     "test": "NODE_ENV=test nyc mocha",
     "test:watch": "npm test -- --watch",
     "test:watch:min": "npm run test:watch -- --reporter=min",
@@ -35,8 +36,9 @@
     "cover:ci": "npm run cover:base -- --reporter=text-lcov | coveralls -v",
     "build": "babel src -d dist",
     "precommit": "lint-staged",
-    "prepush": "npm run lint && npm test",
-    "prepublishOnly": "rm -r ./node_modules && npm install && npm run prepush && npm run build"
+    "prepush": "npm run lint && npm test && npm run check:dependencies",
+    "prepublishOnly": "rm -r ./node_modules && npm install && npm run prepush && npm run build",
+    "postinstall": "npm run check:dependencies"
   },
   "dependencies": {
     "babel-runtime": "6.26.0"
@@ -62,6 +64,7 @@
     "nyc": "11.3.0",
     "prettier": "1.8.2",
     "sinon": "4.1.2",
-    "sinon-chai": "2.14.0"
+    "sinon-chai": "2.14.0",
+    "snyk": "1.73.0"
   }
 }
