@@ -36,6 +36,7 @@ jspm_packages
 .node_repl_history
 
 # IDE directories
+.vscode
 .idea
 tmp
 
