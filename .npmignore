@@ -11,6 +11,7 @@ Jenkinsfile*
 package-lock.json
 yarn.lock
 
+.vscode/
 .idea/
 .nyc_output/
 coverage/
